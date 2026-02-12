@@ -4,9 +4,19 @@
 
 [Download](https://jsers.dev/service/gitton)
 
-Gitton is a Git client designed for the AI coding era. Run Claude Code, Cursor CLI, and other AI assistants directly in the integrated terminal. Features AI-powered commit message generation, code review, and PR description generation.
+Gitton is a Git client designed for the AI coding era. Run Claude Code, Cursor CLI, and other AI assistants directly in the integrated terminal. Features AI-powered commit message generation, code review, and PR description generation. Extensible with JavaScript plugins.
 
 ![Gitton Working Copy](https://jsers.dev/images/gitton-working-copy.png)
+
+## Plugins
+
+Extend Gitton with JavaScript. Add sidebar panels, settings tabs, context menus, and more. Use any framework you like—React, Vue, Svelte.
+
+```bash
+npx create-gitton-plugin
+```
+
+[Creating Gitton Plugins](https://jsers.dev/service/gitton/blog/creating-gitton-plugins)
 
 ## Philosophy
 
