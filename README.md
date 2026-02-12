@@ -18,6 +18,17 @@ npx create-gitton-plugin
 
 [Creating Gitton Plugins](https://jsers.dev/service/gitton/blog/creating-gitton-plugins)
 
+## CLI
+
+Install and manage plugins from the command line.
+
+```bash
+npm install -g @gitton-dev/cli
+gitton install <plugin-name>
+```
+
+[Gitton CLI & Plugins](https://jsers.dev/service/gitton/blog/gitton-plugins)
+
 ## Philosophy
 
 Gitton represents a paradigm shift in development tools for the AI era. With AI coding assistants like Claude Code, Cursor CLI, and Aider, developers spend less time in traditional editors and more time in terminals.
