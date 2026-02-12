@@ -2,6 +2,8 @@
 
 **Git Client for Vibe Coding**
 
+[Download](https://jsers.dev/service/gitton)
+
 Gitton is a Git client designed for the AI coding era. Run Claude Code, Cursor CLI, and other AI assistants directly in the integrated terminal. Features AI-powered commit message generation, code review, and PR description generation.
 
 ![Gitton Working Copy](https://jsers.dev/images/gitton-working-copy.png)
@@ -72,84 +74,9 @@ Extend Gitton's functionality with plugins:
 
 ## Plugin Development
 
-Create plugins to extend Gitton. See `gitton-plugin.d.ts` for TypeScript definitions.
+Extend Gitton with plugins. Add sidebar panels, settings tabs, context menus, and Git hooks.
 
-### Plugin Structure
-
-```
-my-gitton-plugin/
-├── package.json        # Plugin manifest in "gitton" field
-├── ui/
-│   └── sidebar.html    # UI extension HTML
-└── ...
-```
-
-### package.json Example
-
-```json
-{
-  "name": "gitton-plugin-example",
-  "version": "1.0.0",
-  "gitton": {
-    "displayName": "Example Plugin",
-    "version": "1.0.0",
-    "description": "An example plugin for Gitton",
-    "permissions": ["ui:sidebar", "settings:read", "settings:write"],
-    "extensionPoints": {
-      "sidebar": {
-        "entry": "ui/sidebar.html",
-        "icon": "Puzzle",
-        "position": "bottom"
-      }
-    }
-  }
-}
-```
-
-### Plugin API
-
-Access the `gitton` global object in your plugin HTML:
-
-```typescript
-// Settings
-const value = await gitton.settings.get('myKey');
-await gitton.settings.set('myKey', { foo: 'bar' });
-
-// Notifications
-gitton.ui.showNotification('Hello!', 'info');
-
-// Open external URL
-await gitton.ui.openExternal('https://github.com');
-
-// HTTP requests
-const result = await gitton.network.fetch('https://api.example.com/data');
-
-// GitHub CLI
-const prList = await gitton.gh.run(['pr', 'list', '--json', 'number,title']);
-
-// File system (within repo only)
-const content = await gitton.fs.readFile('.gitignore');
-await gitton.fs.writeFile('temp.txt', 'content');
-```
-
-### Permissions
-
-| Permission | Description |
-|------------|-------------|
-| `ui:sidebar` | Add sidebar panel |
-| `ui:settings` | Add settings tab |
-| `ui:repositorySettings` | Add repository settings tab |
-| `ui:contextMenu` | Add context menu items |
-| `settings:read` | Read plugin settings |
-| `settings:write` | Write plugin settings |
-| `network:fetch` | Make HTTP requests |
-| `git:read` | Read Git information |
-| `git:write` | Execute Git operations |
-| `git:hooks` | Register Git hooks |
-
-### Marketplace
-
-Publish your plugin on GitHub with the `gitton-plugin` topic to appear in the Gitton marketplace.
+See [gitton-plugins](https://github.com/gitton-dev/gitton-plugins) for examples and documentation.
 
 ## Pricing
 
