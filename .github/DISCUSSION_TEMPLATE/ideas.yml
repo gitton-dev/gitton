@@ -1,0 +1,30 @@
+title: "[Idea] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Share Your Ideas
+
+        Have an idea for Gitton? We'd love to hear it!
+
+        This is a space for brainstorming and early-stage ideas.
+        For well-defined feature requests, please use [Issues](https://github.com/gitton-dev/gitton/issues/new?template=feature_request.yml).
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your Idea
+      description: Describe your idea or suggestion.
+      placeholder: What if Gitton could...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: How would this help your workflow?
+      placeholder: This would help me...
+    validations:
+      required: false

@@ -1,0 +1,31 @@
+title: "[Q&A] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Question & Answer
+
+        Have a question about using Gitton? Ask here!
+
+        Before posting, please:
+        - Check the [documentation](https://jsers.dev/service/gitton)
+        - Search existing discussions
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: How do I...?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Any additional context that might help answer your question.
+      placeholder: I'm trying to...
+    validations:
+      required: false

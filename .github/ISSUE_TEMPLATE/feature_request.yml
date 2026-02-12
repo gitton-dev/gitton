@@ -1,0 +1,89 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for Gitton.
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Thank you for your feature request!
+
+        We appreciate your ideas to make Gitton better. Please describe your suggestion in detail.
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: |
+        Describe the problem you're trying to solve or the goal you want to achieve.
+        Focus on the "why" rather than the "how".
+      placeholder: I'm always frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: |
+        Describe how you'd like this feature to work.
+        Include mockups, sketches, or examples if possible.
+      placeholder: I'd like Gitton to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+      placeholder: I've tried...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      description: Which area of Gitton does this feature relate to?
+      options:
+        - Git Operations (commit, branch, merge, etc.)
+        - History & Graph View
+        - Terminal Integration
+        - AI Features (commit messages, PR descriptions, code review)
+        - GitHub Integration (PRs, issues, etc.)
+        - Worktrees
+        - Plugin System
+        - UI/UX
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority for You
+      description: How important is this feature to your workflow?
+      options:
+        - Nice to have
+        - Important
+        - Critical - blocking my workflow
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: |
+        Links to related issues, similar features in other apps, or relevant resources.
+      placeholder: |
+        - #123
+        - Similar feature in App X: [link]
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **Note:** If the submit button is disabled, please check that you filled all required fields and added a **Title**.

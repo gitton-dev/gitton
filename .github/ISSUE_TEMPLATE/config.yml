@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Plugin Development Questions
+    url: https://github.com/gitton-dev/gitton-plugins
+    about: For questions about developing Gitton plugins, check the plugins repository.
+  - name: General Questions & Discussions
+    url: https://github.com/gitton-dev/gitton/discussions
+    about: For general questions, tips, and community discussions.
+  - name: Website & Documentation
+    url: https://jsers.dev/service/gitton
+    about: Visit the official website for documentation and guides.

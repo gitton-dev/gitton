@@ -1,0 +1,49 @@
+name: Auto Label Issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const labels = [];
+
+            // Check issue title/body for keywords
+            const text = (issue.title + ' ' + issue.body).toLowerCase();
+
+            if (text.includes('crash') || text.includes('error') || text.includes('bug')) {
+              labels.push('bug');
+            }
+            if (text.includes('feature') || text.includes('enhancement') || text.includes('request')) {
+              labels.push('enhancement');
+            }
+            if (text.includes('plugin')) {
+              labels.push('plugin');
+            }
+            if (text.includes('terminal')) {
+              labels.push('terminal');
+            }
+            if (text.includes('github') || text.includes('pull request') || text.includes('pr')) {
+              labels.push('github-integration');
+            }
+            if (text.includes('ai') || text.includes('commit message') || text.includes('review')) {
+              labels.push('ai-features');
+            }
+
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                labels: labels
+              });
+            }

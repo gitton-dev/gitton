@@ -1,0 +1,27 @@
+title: "[Show] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Show and Tell
+
+        Share your Gitton setup, plugins, workflows, or tips with the community!
+
+  - type: textarea
+    id: showcase
+    attributes:
+      label: What are you sharing?
+      description: Describe what you've built or discovered.
+      placeholder: I created a plugin that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: How does it work? Include screenshots, links, or code if applicable.
+      placeholder: Here's how it works...
+    validations:
+      required: false
